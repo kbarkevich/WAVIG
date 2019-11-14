@@ -24,8 +24,8 @@ class CreateWordsTable extends Migration
         });
 
         $client = new Client();
-        
-        $res = $client->get('http://www.desiquintans.com/downloads/nounlist/nounlist.txt');
+
+        $res = $client->get(config('services.words.noun_txt_url'));
         $nounstring = $res->getBody()->getContents();
         $noun = strtok($nounstring, "\n");
         $nouns = [];
@@ -35,7 +35,7 @@ class CreateWordsTable extends Migration
             $noun = strtok("\n");
         }
 
-        $res = $client->get('https://gist.githubusercontent.com/hugsy/8910dc78d208e40de42deb29e62df913/raw/eec99c5597a73f6a9240cab26965a8609fa0f6ea/english-adjectives.txt');
+        $res = $client->get(config('services.words.adj_txt_url'));
         $adjstring = $res->getBody()->getContents();
         $adj = strtok($adjstring, "\n");
         $adjs = [];

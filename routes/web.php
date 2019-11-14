@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::post('/boatname', [BoatNameController::class, 'load'])->name('boatname');
 Route::post('/saveboatname', [BoatNameController::class, 'send_registration'])->name('send_registration');
+Route::get('/verify', [BoatNameController::class, 'verify'])->name('verify');
+Route::get('/registered', [BoatNameController::class, 'registered'])->name('registered');

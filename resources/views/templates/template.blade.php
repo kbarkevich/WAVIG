@@ -17,6 +17,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="/">WAVIG</a>
         </nav>
+        @if (@session('errors'))
+            <ul style="text-align: center; list-style-type:none;">
+            @foreach (@session('errors') as $error)
+                <li style="color:red">{{ $error }}</li>
+            @endforeach
+            </ul>
+        @endif
         @yield('content')
     </body>
 </html>

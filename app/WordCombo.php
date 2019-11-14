@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Mail;
 
 class WordCombo extends Model
 {
@@ -28,5 +29,14 @@ class WordCombo extends Model
     public function boat_name()
     {
         return ucfirst($this->word1->formatted_text()) . " Mc" . ucfirst($this->word2->formatted_text(true)) . "face";
+    }
+
+    public function send_verification_email($email)
+    {
+        $boat = $this;
+        Mail::send('emails.verify', ['wordcombo' => $this], function ($m) use ($boat, $email) {
+            $m->from('WAVIGenerator@gmail.com', 'WAVIG');
+            $m->to($email, $email)->subject($boat->boat_name() . " Registration");
+        });
     }
 }

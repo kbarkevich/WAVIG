@@ -49510,6 +49510,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/verify.scss":
+/*!************************************!*\
+  !*** ./resources/sass/verify.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/welcome.scss":
 /*!*************************************!*\
   !*** ./resources/sass/welcome.scss ***!
@@ -49522,16 +49533,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/welcome.scss ./resources/sass/boatname.scss ***!
-  \**************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/welcome.scss ./resources/sass/boatname.scss ./resources/sass/verify.scss ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /var/www/resources/sass/welcome.scss */"./resources/sass/welcome.scss");
-module.exports = __webpack_require__(/*! /var/www/resources/sass/boatname.scss */"./resources/sass/boatname.scss");
+__webpack_require__(/*! /var/www/resources/sass/boatname.scss */"./resources/sass/boatname.scss");
+module.exports = __webpack_require__(/*! /var/www/resources/sass/verify.scss */"./resources/sass/verify.scss");
 
 
 /***/ })

@@ -14,9 +14,11 @@
         {{ $wordcombo->boat_name() }}
     </div>
     <form action="./saveboatname" method="post">
+        @csrf
         <div class="d-flex flex-row justify-content-around bd-highlight">
             <div id="register" class="font-weight-bold">Register Name</div>
-            <input type="text" name="email" id="email" placeholder="Email...">
+            <input type="hidden" name="wordcombo_id" value={{ $wordcombo->id }}>
+            <input type="text" name="email" id="email" placeholder="Email..." required>
             <button class="btn btn-primary" type="submit">Send Verification</button>
         </div>
     </form>

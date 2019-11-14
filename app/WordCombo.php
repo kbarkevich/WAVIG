@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class WordCombo extends Model
 {
+    protected $table = 'word_combo';
+    protected $fillable = [
+        'word1_id',
+        'word2_id',
+        'deadline',
+        'reservation',
+    ];
     public function word1()
     {
         return $this->hasOne(Word::class, 'id', 'word1_id');
@@ -20,6 +27,6 @@ class WordCombo extends Model
     }
     public function boat_name()
     {
-        return ucfirst($this->word1->text()) + " Mc" + ucfirst($this->word1->text(true)) + "face";
+        return ucfirst($this->word1->formatted_text()) . " Mc" . ucfirst($this->word2->formatted_text(true)) . "face";
     }
 }

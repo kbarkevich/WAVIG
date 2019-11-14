@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Word extends Model
 {
-    public function text($force_no_y = false)
+    public function formatted_text($force_no_y = false)
     {
-        return $this->get()->text + $force_no_y ? "" : ($this->get()->y_suffix ? "y" : "");
+        return $this->text . (($force_no_y || substr($this->text, -1) == "y") ? "" : ($this->y_suffix ? "y" : ""));
     }
 }

@@ -1,0 +1,54 @@
+#boatpanel {
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    #boatpanel {
+        width: 90%;
+    }
+}
+
+#preboatname {
+    font-size: 20px;
+    text-align: center;
+}
+
+#boatname {
+    font-size: 45px;
+    color: skyblue;
+    text-align: center;
+}
+
+@media (max-width: 360px) {
+    #boatname {
+        font-size: 35px;
+    }
+}
+
+#register {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (max-width: 420px) {
+    #register {
+        display: none;
+    }
+}
+
+#email {
+    position: relative;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    width: 40%;
+}

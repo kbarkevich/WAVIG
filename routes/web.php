@@ -11,6 +11,10 @@
 |
 */
 
+use App\Http\Controllers\BoatNameController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/boatname', [BoatNameController::class, 'load'])->name('boatname');
